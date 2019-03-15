@@ -1,6 +1,0 @@
-C:\Users\Kamil\Documents\gity\MatrixUnitTests\MatrixLibrary\bin\Debug\MatrixLibrary.dll
-C:\Users\Kamil\Documents\gity\MatrixUnitTests\MatrixLibrary\bin\Debug\MatrixLibrary.pdb
-C:\Users\Kamil\Documents\gity\MatrixUnitTests\MatrixLibrary\obj\Debug\MatrixLibrary.csprojAssemblyReference.cache
-C:\Users\Kamil\Documents\gity\MatrixUnitTests\MatrixLibrary\obj\Debug\MatrixLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Kamil\Documents\gity\MatrixUnitTests\MatrixLibrary\obj\Debug\MatrixLibrary.dll
-C:\Users\Kamil\Documents\gity\MatrixUnitTests\MatrixLibrary\obj\Debug\MatrixLibrary.pdb
