@@ -55,9 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatatypesTests\MatrixDoubleTest.cs" />
-    <Compile Include="MatricesTests\GenericMatrixTest.cs" />
+    <Compile Include="MatricesTests\MatrixTest.cs" />
     <Compile Include="NunitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilsTests\ArrayGeneratorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Fakes Include="Fakes\MatrixLibrary.fakes" />

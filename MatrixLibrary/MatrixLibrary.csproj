@@ -48,11 +48,10 @@
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Matrices\IMatrix.cs" />
     <Compile Include="Matrices\Matrix.cs" />
+    <Compile Include="MatrixUtils\ArrayGenerator.cs" />
     <Compile Include="Norms\INorm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MatrixUtils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

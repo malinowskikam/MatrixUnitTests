@@ -76,13 +76,39 @@ namespace MatrixLibrary.Matrices
 
         public IMatrix<IDatatype<T1>, T1> Multiply(IMatrix<IDatatype<T1>, T1> Factor)
         {
-            throw new NotImplementedException();
+            if (this.GetColumnCount() != Factor.GetRowCount())
+                throw new MatrixDimensionsMismatchException("Row/Column count mismatch");
+
+            int newRowCount = this.GetRowCount();
+            int newColCount = Factor.GetColumnCount();
+
+            IDatatype<T1>[,] raw = new IDatatype<T1>[newRowCount,newColCount];
+
+            for (int i = 0; i < newRowCount; i++) //wiersze
+                for (int j = 0; j < newColCount; j++) //kolumny
+                {
+                    IDatatype<T1> res = this.GetRawMatrix()[i,0].Multiply(Factor.GetRawMatrix()[0,j]);
+                    for (int k = 1; k < this.GetColumnCount(); k++)
+                        res = res.Add(this.GetRawMatrix()[i,k].Multiply(Factor.GetRawMatrix()[k,j]));
+
+                    raw[i,j] = res;
+                }
+
+            return new Matrix<T1>(raw);
         }
+
+
 
         public IMatrix<IDatatype<T1>, T1> Scale(IDatatype<T1> Scalar)
         {
-            throw new NotImplementedException();
-        }
+            IDatatype<T1>[,] raw = new IDatatype<T1>[this.RowCount, this.ColumnCount];
+
+            for (int i = 0; i < this.RowCount; i++)
+                for (int j = 0; j < this.ColumnCount; j++)
+                    raw[i, j] = this.GetRawMatrix()[i, j].Multiply(Scalar);
+
+            return new Matrix<T1>(raw);
+         }
 
         public override Boolean Equals(Object o)
         {
